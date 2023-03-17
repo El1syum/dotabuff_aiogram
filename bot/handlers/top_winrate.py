@@ -2,21 +2,15 @@ import logging
 
 from aiogram import types, Dispatcher
 
-from scripts.get_hero_list import get_hero_list
+from scripts.get_top_winrate import get_top_winrate
 
 
 async def top_winrate(message: types.Message):
     logging.info(message)
-    heroes_list = []
 
-    heroes = get_hero_list()
-    for hero in heroes:
-        hero_name = '-'.join(hero.get('Name').split())
-        hero_winrate = hero.get('Winrate')
-        hero_stat = f'{hero_name}: {hero_winrate}'
-        heroes_list.append(hero_stat)
+    top_winrate_result = get_top_winrate()
 
-    await message.answer(', '.join(heroes_list))
+    await message.answer(top_winrate_result)
 
 
 def register_top_winrate(dp: Dispatcher):
