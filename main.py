@@ -37,7 +37,6 @@ def register_all_handlers(dp):
     register_start(dp)
     register_top_winrate(dp)
     register_itembuild(dp)
-    # register_echo(dp)
 
 
 async def main():
