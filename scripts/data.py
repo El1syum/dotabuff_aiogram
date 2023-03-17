@@ -1,6 +1,7 @@
 from fake_useragent import UserAgent
 
 WINRATE_URL = 'https://ru.dotabuff.com/heroes/winning'
+TRENDS_URL = 'https://www.dotabuff.com/heroes/trends'
 
 ua = UserAgent()
 

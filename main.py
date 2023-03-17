@@ -10,6 +10,7 @@ from bot.handlers.itembuild import register_itembuild
 from bot.handlers.main_menu import register_main_menu
 from bot.handlers.start import register_start
 from bot.handlers.top_winrate import register_top_winrate
+from bot.handlers.trends import register_trends
 
 if not os.path.exists('logs/'):
     os.mkdir('logs')
@@ -37,6 +38,7 @@ def register_all_handlers(dp):
     register_start(dp)
     register_top_winrate(dp)
     register_itembuild(dp)
+    register_trends(dp)
 
 
 async def main():
