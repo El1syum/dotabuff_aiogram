@@ -5,8 +5,8 @@ from aiogram import types, Dispatcher
 from bot.buttons.common.menu import menu_buttons
 
 start_text = "Hello friend! I am simple, not official dotabuff bot. \n" \
-             "With me u can get some info from Dotabuff.com! \n" \
-             "Choose what do u want: \n\n" \
+             "With me you can get some info from Dotabuff.com! \n" \
+             "Choose what do you want: \n\n" \
              "1. See who in the top by winrate now🔝\n" \
              "2. Get a itembuild of some hero👊\n" \
              "3. Look at the trends📈\n" \

@@ -4,8 +4,9 @@ import logging
 import os.path
 
 from aiogram import Bot, Dispatcher, types
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-from bot.handlers.echo import register_echo
+from bot.handlers.itembuild import register_itembuild
 from bot.handlers.main_menu import register_main_menu
 from bot.handlers.start import register_start
 from bot.handlers.top_winrate import register_top_winrate
@@ -35,11 +36,13 @@ def register_all_handlers(dp):
     register_main_menu(dp)
     register_start(dp)
     register_top_winrate(dp)
-    register_echo(dp)
+    register_itembuild(dp)
+    # register_echo(dp)
 
 
 async def main():
-    dp = Dispatcher(bot=bot)
+    storage = MemoryStorage()
+    dp = Dispatcher(bot=bot, storage=storage)
     register_all_handlers(dp)
     await set_command(dp)
     try:

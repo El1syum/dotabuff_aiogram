@@ -2,10 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
+from .data import WINRATE_URL
+
 
 def get_hero_list():
     heroes_list = []
-    url = 'https://ru.dotabuff.com/heroes/winning'
+    url = WINRATE_URL
 
     ua = UserAgent()
     headers = {

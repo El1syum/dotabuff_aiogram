@@ -4,7 +4,7 @@ from aiogram import types, Dispatcher
 
 from bot.buttons.common.menu import menu_buttons
 
-menu_message = "Choose what do u want: \n\n" \
+menu_message = "Choose what do you want: \n\n" \
                "1. See who in the top by winrate now🔝\n" \
                "2. Get a itembuild of some hero👊\n" \
                "3. Look at the trends📈\n" \
