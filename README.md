@@ -1,6 +1,7 @@
 # dotabuff_aiogram
 
-*ENG**
+# it is a new version of [Telebot Dotabuff](https://github.com/El1syum/dotabuff_bot)
+**ENG**
 
 _Before using_:
 
