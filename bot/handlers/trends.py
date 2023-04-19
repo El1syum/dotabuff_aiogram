@@ -22,15 +22,22 @@ async def get_count(message: types.Message):
 
 
 async def trends(message: types.Message, state: FSMContext):
+    count = message.text
+
     try:
+        count = int(count)
+    except ValueError:
+        await message.answer('Count must be integer')
+        return 0
 
-        count = message.text
+    if count > 15:
+        await message.answer('Count can\'t be more than 15')
+        return 0
 
-        trends_result = get_trends(count)
+    trends_result = get_trends(count)
 
-        await message.answer(trends_result)
-    finally:
-        await state.finish()
+    await message.answer(trends_result)
+    await state.finish()
 
 
 def register_trends(dp: Dispatcher):

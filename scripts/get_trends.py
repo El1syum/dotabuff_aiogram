@@ -5,13 +5,6 @@ from scripts.data import TRENDS_URL, headers
 
 
 def get_trends(count):
-    try:
-        count = int(count)
-    except TypeError:
-        return 'Count must be integer'
-
-    if count > 15:
-        return 'Count can\'t be more than 15'
 
     message = ''
 

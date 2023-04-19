@@ -17,7 +17,7 @@ from bot.handlers.trends import register_trends
 if not os.path.exists('logs/'):
     os.mkdir('logs')
 
-logging.basicConfig(filename='logs/logs.log', level=logging.INFO, encoding='utf-8')
+logging.basicConfig(filename='logs/logs.log', level=logging.INFO)
 
 with open('config.json', 'r') as file:
     config = json.load(file)
